@@ -1,46 +1,45 @@
-﻿# Simple Student-Service
+# Student Microservice
 
-This repository contains the implementation of simple Student Service system. The classes are designed and modeled based on the UML class diagram shown below.
+Spring Boot service for managing students and their addresses with full CRUD operations and Swagger documentation.
 
-## Class Diagram
+## Features
+- JPA Entities with Many-to-One relationship
+- Cascade delete functionality
+- Custom exception handling
+- Swagger/OpenAPI 3 documentation
+- H2 in-memory database
+- RESTful endpoints
 
-The system consists of two primary entities: `Student` and `Address`. Their relationship is modeled as "one-to-one," where each student resides at a single address.
+## Entity Relationship
+![Class Diagram](https://github.com/user-attachments/assets/fef53b38-5ea8-4860-8c4d-d5d92776014b)
 
-![image](https://github.com/user-attachments/assets/fef53b38-5ea8-4860-8c4d-d5d92776014b)
+**Relationship**: Many Students ➔ One Address (`@ManyToOne` mapping)
 
-## Entities Overview
+## Tech Stack
+- Java 17
+- Spring Boot 3.1
+- Spring Data JPA
+- Hibernate
+- mysql Database with docker compose
+- Springdoc OpenAPI
 
-### 1. Student
-- **Attributes**:
-  - `id`: Unique identifier for the student.
-  - `firstName`: The first name of the student.
-  - `lastName`: The last name of the student.
-  - `email`: The email address of the student.
-  - `address`: One-to-one relationship with the `Address` entity.
+## API Endpoints
+| Method | Endpoint           | Description                |
+|--------|--------------------|----------------------------|
+| GET    | /api/students      | Get all students           |
+| GET    | /api/students/{id} | Get student by ID          |
+| POST   | /api/students      | Create new student         |
+| PUT    | /api/students/{id} | Update existing student    |
+| DELETE | /api/students/{id} | Delete student             |
 
-### 2. Address
-- **Attributes**:
-  - `id`: Unique identifier for the address.
-  - `city`: The city where the student resides.
-  - `street`: The street name of the residence.
+# Swagger Endpoint 
 
-### Relationship
-- **Type**: One-to-One
-- **Description**: Each `Student` has a unique `Address`.
+| GET    | /swagger-ui/index.html | Swagger/OpenAPI 3 documentation |
 
-## Package Structure
+![Swagger UI](https://github.com/user-attachments/assets/d66cd900-9abc-4b87-a04e-58996750377f)
 
-The implementation is part of the package `tn.micro.service.cloud.entities`.
-
-### File Structure
-```plaintext
-tn.micro.service.cloud/
-└── entities/
-    ├── Student.java
-    ├── Address.java
-    └── README.md
-```
-# Swagger Implementation :
-
-![image](https://github.com/user-attachments/assets/d66cd900-9abc-4b87-a04e-58996750377f)
-
+## Run Locally
+1. Clone repository
+2. Run with Maven:
+```bash
+mvn spring-boot:run
