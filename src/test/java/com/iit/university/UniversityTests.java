@@ -1,0 +1,13 @@
+package com.iit.university;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class UniversityTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
