@@ -1,8 +1,6 @@
-﻿# university-tp
+﻿# Simple Student-Service
 
-# TN Microservice Cloud: Persistent Entities
-
-This repository contains the implementation of the persistent entities for the **TN Microservice Cloud** system. The classes are designed and modeled based on the UML class diagram shown below.
+This repository contains the implementation of simple Student Service system. The classes are designed and modeled based on the UML class diagram shown below.
 
 ## Class Diagram
 
