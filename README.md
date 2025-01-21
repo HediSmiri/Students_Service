@@ -39,10 +39,8 @@ tn.micro.service.cloud/
     ├── Student.java
     ├── Address.java
     └── README.md
+```
+# Swagger Implementation :
 
-## Swagger Implementation :
-
-![image](https://github.com/user-attachments/assets/6bbe5473-23aa-42f1-b150-6395b44ba443)
-
-
+![image](https://github.com/user-attachments/assets/d66cd900-9abc-4b87-a04e-58996750377f)
 
